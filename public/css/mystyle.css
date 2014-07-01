@@ -2,12 +2,22 @@
   border: 2px solid red;
 }
 */
+
+body {
+  background-color: #e9eaed;
+}
+
+#banner {
+  background-color: #4c66a4;
+  height: 45px;
+}
+
 #footer {
   background-color: black;
   color: white;
 }
 
-.employees {
+.login-window {
   /*background-color: grey;*/
 }
 
@@ -16,18 +26,40 @@ table {
   width: 100%;
 }
 
-.id {
-  /*width: 20%;*/
-}
-.name {
-  /*width: 20%;*/
-}
-
-.list-values {
-  width: 100px;
-  background-color: white;
-}
 
 li {
   list-style-type: none;
+}
+
+.container {
+  height: 100%;
+  margin-top: 20%;
+}
+
+/*#my-box {
+  width: 80%;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin: 50px auto;
+}
+*/
+
+div.panel {
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 75%;
+  background-color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+@media all and (max-width: 64rem) {
+  .main {
+    max-width: 90%;
+  }
 }
