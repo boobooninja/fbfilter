@@ -10,6 +10,11 @@ enable :sessions
 set :bind, '0.0.0.0' # Vagrant fix
 set :port, 9494
 
+get '/' do
+	erb :home
+end
+
+
 # get '/' do
 #   result = RPS::ValidateSession.run(session)
 #   if result[:success?]
