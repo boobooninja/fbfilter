@@ -11,9 +11,12 @@ set :bind, '0.0.0.0' # Vagrant fix
 set :port, 9494
 
 get '/' do
-	erb :home
+	erb :login
 end
 
+get '/filter' do
+  erb :filter
+end
 
 # get '/' do
 #   result = RPS::ValidateSession.run(session)

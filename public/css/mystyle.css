@@ -5,6 +5,7 @@
 
 body {
   background-color: #e9eaed;
+  font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
 }
 
 #banner {
@@ -12,30 +13,23 @@ body {
   height: 45px;
 }
 
-#footer {
-  background-color: black;
-  color: white;
-}
-
-.login-window {
-  /*background-color: grey;*/
-}
-
-table {
-  /*border: 2px solid red;*/
-  width: 100%;
-}
-
-
 li {
   list-style-type: none;
 }
 
-.container {
+.tall {
+  padding-top: 10%;
+}
+
+.hidden {
+  display: none;
+}
+
+/*.container {
   height: 100%;
   margin-top: 20%;
 }
-
+*/
 /*#my-box {
   width: 80%;
   -webkit-border-radius: 20px;
@@ -46,11 +40,12 @@ li {
 */
 
 div.panel {
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
+  /*-webkit-border-radius: 15px;*/
+  /*border-radius: 15px;*/
   padding: 20px;
   margin: 0 auto;
   width: 75%;
+  height: 100%;
   background-color: white;
 }
 
