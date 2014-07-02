@@ -92,6 +92,55 @@ function getPhotos() {
     handlePhotos(response.photos.data);
   });
 }
+ function sortPhotosByLikes(photos){
+
+  return photos.sort(function(a,b){
+    if (a.likes){
+      var alikes = a.likes.data.length;
+    }
+    else{
+     var alikes = 0;
+    }
+    if (b.likes){
+      var blikes = b.likes.data.length;
+    }
+    else{
+     var blikes = 0;
+    }
+    if (alikes < blikes){
+      return 1;
+    }
+    else{
+      return -1;
+    }
+  });
+
+ }
+
+ function sortPhotosByComments(photos){
+
+  return photos.sort(function(a,b){
+    if (a.comments){
+      var acomments = a.comments.data.length;
+    }
+    else{
+     var acomments = 0;
+    }
+    if (b.comments){
+      var bcomments = b.comments.data.length;
+    }
+    else{
+     var bcomments = 0;
+    }
+    if (acomments < bcomments){
+      return 1;
+    }
+    else{
+      return -1;
+    }
+  });
+
+ }
 
 function handlePhotos(photos) {
   for(var i = 0; i < photos.length; i++) {
@@ -128,8 +177,10 @@ function displayPost(post) {
   }
 }
 
+
 $(document).find('#posts').hide();
 $(document).find('#photos').show();
+
 
 // $(document).on('click', '.fb-login-button', function(){
 //   FB.login(function(response) {
