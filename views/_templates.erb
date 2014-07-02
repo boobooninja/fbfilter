@@ -11,8 +11,6 @@
     </li>
   </script>
 
-
-
   <script class='tmp-photo-comment' type="x-tmpl-mustache">
     <li>
       <div class="photo-block imgLiquidFill imgLiquid">
@@ -22,6 +20,23 @@
         <span>Comments: {{commentCount}}</span>
       </div>
     </li>
+  </script>
+
+  <script class='tmp-photos' type="x-tmpl-mustache">
+    <div id="photos" class="row">
+      <div class="large-12  medium-12 column fbphotos">
+        <ul id="photo-grid" class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+        </ul>
+      </div>
+    </div>
+  </script>
+
+  <script class='tmp-login' type="x-tmpl-mustache">
+    <div id="login" class="row center tall">
+      <div class="large-12  medium-12 column">
+        <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true" data-scope="public_profile,email,user_photos" onlogin="checkLoginState();"></div>
+      </div>
+    </div>
   </script>
 
 </div>

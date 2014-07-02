@@ -11,6 +11,6 @@ set :bind, '0.0.0.0' # Vagrant fix
 set :port, 9494
 
 get '/' do
-	erb :login
+	# erb :login
 end
 

@@ -22,9 +22,12 @@
         for (var i = 0; i < photos.length; i++){
           setCounts(photos[i]);
         }
+        console.log('bizLogic', bizLogic);
         bizLogic.fbPhotos = response;
         bizLogic.photos = photos;
       });
+      // wait until photos are loaded
+
       console.log('Photos loaded!');
     };
 

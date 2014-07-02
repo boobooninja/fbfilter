@@ -16,16 +16,12 @@
     }
 
     function displayPhoto_likes(photo) {
-      var template = $('#templates .tmp-photo-like').html();
-      Mustache.parse(template);
-      var rendered = Mustache.render(template, photo);
+      var rendered = this.renderTemplate('.tmp-photo-like', photo);
       $('#photo-grid').append(rendered);
     }
 
     function displayPhoto_comments(photo) {
-      var template = $('#templates .tmp-photo-comment').html();
-      Mustache.parse(template);
-      var rendered = Mustache.render(template, photo);
+      var rendered = this.renderTemplate('.tmp-photo-comment', photo);
       $('#photo-grid').append(rendered);
     }
 
@@ -36,6 +32,13 @@
     function renderPhotosByComments() {
       handlePhotos( bl.sortPhotosByComments(),'comments' );
     }
+
+    this.renderTemplate = function(klass, data) {
+      var template = $('#templates ' + klass).html();
+      Mustache.parse(template);
+      var rendered = Mustache.render(template, data);
+      return rendered;
+    };
 
     $(document).on('click', '#likes', function(e) {
       e.preventDefault();
@@ -52,6 +55,6 @@
   };
 
   // this runs it
-  window.UI = new UI();
+  window.viewUI = new UI();
 
 })();
