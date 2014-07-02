@@ -86,6 +86,7 @@ function testAPI() {
 function getPhotos() {
   console.log('Fetching your photos...');
   FB.api('/me?fields=photos', function(response) {
+    window.fbResponse = response;
     console.log(response);
     handlePhotos(response.photos.data);
   });
