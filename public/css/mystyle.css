@@ -8,13 +8,16 @@
   height: 200px;
   background-color: #e9eaed;
   text-align: center;
+  overflow: hidden;
 }
 
 .photo-block img {
-  max-width: 300px;
-  min-width: 300px;
-  max-height: 300px;
-  min-height: 300px;
+  /*max-width: 180px;
+  min-width: 180px;*/
+  height: 200px;
+  /*min-height: 180px;*/
+  position: relative;
+  left: -28px;
 }
 
 body {
