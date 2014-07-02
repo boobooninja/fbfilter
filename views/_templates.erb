@@ -1,20 +1,30 @@
 <div id='templates'>
 
-  <script class='tmp-photos' type="x-tmpl-mustache">
-    <ul id="photo-grid" class="small-block-grid-3 medium-block-grid-3 large-block-grid-3">
-    </ul>
-  </script>
 
-  <script class='tmp-photo' type="x-tmpl-mustache">
+
+  <script class='tmp-photo-like' type="x-tmpl-mustache">
     <li>
       <div class="photo-block">
         <img src={{source}}>
       </div>
       <div>
         <span>Likes: {{likeCount}}</span>
+      </div>
+    </li>
+  </script>
+
+
+
+  <script class='tmp-photo-comment' type="x-tmpl-mustache">
+    <li>
+      <div class="photo-block">
+        <img src={{source}}>
+      </div>
+      <div>
         <span>Comments: {{commentCount}}</span>
       </div>
     </li>
   </script>
 
 </div>
+
