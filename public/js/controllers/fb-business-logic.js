@@ -22,9 +22,10 @@
         for (var i = 0; i < photos.length; i++){
           setCounts(photos[i]);
         }
-
+        bizLogic.fbPhotos = response;
         bizLogic.photos = photos;
       });
+      console.log('Photos loaded!');
     };
 
    this.sortPhotosByLikes = function(){

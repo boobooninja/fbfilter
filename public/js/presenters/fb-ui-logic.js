@@ -6,8 +6,13 @@
       $('#photo-grid').empty();
       for(var i = 0; i < photos.length; i++) {
         eval('displayPhoto_' + type)(photos[i]);
-        // displayPhoto_likes(photos[i]);
       }
+
+      $(".imgLiquidFill").imgLiquid({
+          fill: true,
+          horizontalAlign: "center",
+          verticalAlign: "top"
+      });
     }
 
     function displayPhoto_likes(photo) {
