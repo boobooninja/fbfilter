@@ -9,11 +9,13 @@ function statusChangeCallback(response) {
   // for FB.getLoginStatus().
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
-    $(document).find('#login').hide();
-    $(document).find('#posts').show();
+    // $(document).find('#login').hide();
+    // $(document).find('#posts').show();
+    $(document).find('#photos').show();
 
     testAPI();
-    getFeed();
+    // getFeed();
+    getPhotos();
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -81,6 +83,24 @@ function testAPI() {
   });
 }
 
+function getPhotos() {
+  console.log('Fetching your photos...');
+  FB.api('/me?fields=photos', function(response) {
+    console.log(response);
+    handlePhotos(response.photos.data);
+  });
+}
+
+function handlePhotos(photos) {
+  for(var i = 0; i < photos.length; i++) {
+    displayPhoto(photos[i]);
+  }
+}
+
+function displayPhoto(photo) {
+  $('.fbphotos').append("<div class='row fbphoto' panel>"+photo.name+"</div>");
+}
+
 function getFeed() {
   console.log('Fetching your feed...');
   FB.api('/me?fields=posts', function(response) {
@@ -102,7 +122,8 @@ function displayPost(post) {
   }
 }
 
-$(document).find('#posts').show();
+$(document).find('#posts').hide();
+$(document).find('#photos').show();
 
 // $(document).on('click', '.fb-login-button', function(){
 //   FB.login(function(response) {
