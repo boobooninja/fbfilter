@@ -14,7 +14,7 @@
       }
     }
 
-    this.getPhotos = function() {
+    this.getPhotos = function(func) {
       console.log('Fetching your photos...');
       var bizLogic = this;
       FB.api('/me?fields=photos', function(response) {
@@ -25,10 +25,9 @@
         console.log('bizLogic', bizLogic);
         bizLogic.fbPhotos = response;
         bizLogic.photos = photos;
+        console.log('Photos loaded!');
+        func();
       });
-      // wait until photos are loaded
-
-      console.log('Photos loaded!');
     };
 
    this.sortPhotosByLikes = function(){

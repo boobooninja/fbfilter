@@ -9,10 +9,11 @@ function statusChangeCallback(response) {
   // for FB.getLoginStatus().
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
-    bl.getPhotos();
-    var rendered = viewUI.renderTemplate('.tmp-photos', {});
-    $('#main').append(rendered);
-    $('#likes').trigger('click');
+    bl.getPhotos(function(){
+      var rendered = viewUI.renderTemplate('.tmp-photos', {});
+      $('#main').append(rendered);
+      $('#likes').trigger('click');
+    });
 
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
