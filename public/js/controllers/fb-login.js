@@ -101,10 +101,10 @@ function handlePhotos(photos) {
 
 function displayPhoto(photo) {
   // $('.fbphotos').append("<div class='row fbphoto' panel>"+photo.name+"</div>");
-  var template = $('#templates .tmp-photos').html();
+  var template = $('#templates .tmp-photo').html();
   Mustache.parse(template);
   var rendered = Mustache.render(template, photo);
-  $('.fbphotos').append(rendered);
+  $('#photo-grid').append(rendered);
 }
 
 function getFeed() {

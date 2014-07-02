@@ -3,6 +3,20 @@
 }
 */
 
+.photo-block {
+  width: 200px;
+  height: 200px;
+  background-color: #e9eaed;
+  text-align: center;
+}
+
+.photo-block img {
+  max-width: 300px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+}
+
 body {
   background-color: #e9eaed;
   font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
