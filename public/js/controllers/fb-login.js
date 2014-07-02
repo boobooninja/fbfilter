@@ -78,15 +78,16 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me', function(response) {
     console.log('Successful login for: ' + response.name);
-    document.getElementById('status').innerHTML =
-      'Thanks for logging in, ' + response.name + '!';
+    // document.getElementById('status').innerHTML =
+      // 'Thanks for logging in, ' + response.name + '!';
   });
 }
 
 function getPhotos() {
   console.log('Fetching your photos...');
   FB.api('/me?fields=photos', function(response) {
-    window.fbResponse = response;
+    // window.fbResponse = response;
+    window.fbResponse = response.photos.data
     console.log(response);
     handlePhotos(response.photos.data);
   });
@@ -99,7 +100,11 @@ function handlePhotos(photos) {
 }
 
 function displayPhoto(photo) {
-  $('.fbphotos').append("<div class='row fbphoto' panel>"+photo.name+"</div>");
+  // $('.fbphotos').append("<div class='row fbphoto' panel>"+photo.name+"</div>");
+  var template = $('#templates .tmp-photos').html();
+  Mustache.parse(template);
+  var rendered = Mustache.render(template, photo);
+  $('.fbphotos').append(rendered);
 }
 
 function getFeed() {
