@@ -15,7 +15,7 @@ function statusChangeCallback(response) {
 
     testAPI();
     // getFeed();
-    getPhotos();
+    bl.getPhotos();
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -83,99 +83,26 @@ function testAPI() {
   });
 }
 
-function getPhotos() {
-  console.log('Fetching your photos...');
-  FB.api('/me?fields=photos', function(response) {
-    // window.fbResponse = response;
-    window.fbResponse = response.photos.data
-    console.log(response);
-    handlePhotos(response.photos.data);
-  });
-}
- function sortPhotosByLikes(photos){
+// function getFeed() {
+//   console.log('Fetching your feed...');
+//   FB.api('/me?fields=posts', function(response) {
+//     console.log('posts');
+//     console.log(response);
+//     handlePosts(response.posts.data);
+//   });
+// }
 
-  return photos.sort(function(a,b){
-    if (a.likes){
-      var alikes = a.likes.data.length;
-    }
-    else{
-     var alikes = 0;
-    }
-    if (b.likes){
-      var blikes = b.likes.data.length;
-    }
-    else{
-     var blikes = 0;
-    }
-    if (alikes < blikes){
-      return 1;
-    }
-    else{
-      return -1;
-    }
-  });
+// function handlePosts(posts) {
+//   for(var i = 0; i < posts.length; i++) {
+//     displayPost(posts[i]);
+//   }
+// }
 
- }
-
- function sortPhotosByComments(photos){
-
-  return photos.sort(function(a,b){
-    if (a.comments){
-      var acomments = a.comments.data.length;
-    }
-    else{
-     var acomments = 0;
-    }
-    if (b.comments){
-      var bcomments = b.comments.data.length;
-    }
-    else{
-     var bcomments = 0;
-    }
-    if (acomments < bcomments){
-      return 1;
-    }
-    else{
-      return -1;
-    }
-  });
-
- }
-
-function handlePhotos(photos) {
-  for(var i = 0; i < photos.length; i++) {
-    displayPhoto(photos[i]);
-  }
-}
-
-function displayPhoto(photo) {
-  // $('.fbphotos').append("<div class='row fbphoto' panel>"+photo.name+"</div>");
-  var template = $('#templates .tmp-photo').html();
-  Mustache.parse(template);
-  var rendered = Mustache.render(template, photo);
-  $('#photo-grid').append(rendered);
-}
-
-function getFeed() {
-  console.log('Fetching your feed...');
-  FB.api('/me?fields=posts', function(response) {
-    console.log('posts');
-    console.log(response);
-    handlePosts(response.posts.data);
-  });
-}
-
-function handlePosts(posts) {
-  for(var i = 0; i < posts.length; i++) {
-    displayPost(posts[i]);
-  }
-}
-
-function displayPost(post) {
-  if (post.message) {
-    $('.fbposts').append("<div class='row fbpost' panel>"+post.message+"</div>");
-  }
-}
+// function displayPost(post) {
+//   if (post.message) {
+//     $('.fbposts').append("<div class='row fbpost' panel>"+post.message+"</div>");
+//   }
+// }
 
 
 $(document).find('#posts').hide();
