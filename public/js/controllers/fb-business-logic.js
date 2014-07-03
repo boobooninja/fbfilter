@@ -15,19 +15,23 @@
     }
 
     this.getPhotos = function(func) {
-      console.log('Fetching your photos...');
       var bizLogic = this;
-      FB.api('/me?fields=photos', function(response) {
-        var photos = response.photos.data;
-        for (var i = 0; i < photos.length; i++){
-          setCounts(photos[i]);
-        }
-        console.log('bizLogic', bizLogic);
-        bizLogic.fbPhotos = response;
-        bizLogic.photos = photos;
-        console.log('Photos loaded!');
+      if ( bizLogic.photos ) {
         func();
-      });
+      } else {
+        console.log('Fetching your photos...');
+        FB.api('/me?fields=photos', function(response) {
+          var photos = response.photos.data;
+          for (var i = 0; i < photos.length; i++){
+            setCounts(photos[i]);
+          }
+          console.log('bizLogic', bizLogic);
+          bizLogic.fbPhotos = response;
+          bizLogic.photos = photos;
+          console.log('Photos loaded!');
+          func();
+        });
+      }
     };
 
    this.sortPhotosByLikes = function(){
