@@ -7,6 +7,8 @@
 
 // Behold, here are all the Foundation components.
 @import
+  "foundation/_settings",
+  "fb-filter-style",
   "foundation/components/grid",
   "foundation/components/accordion",
   "foundation/components/alert-boxes",
@@ -42,5 +44,4 @@
   "foundation/components/top-bar",
   "foundation/components/type",
   "foundation/components/offcanvas",
-  "foundation/components/visibility",
-  "fb-filter-style";
+  "foundation/components/visibility";
