@@ -83,17 +83,25 @@
   $(document).on('click', '#logout-link', function(e) {
     e.preventDefault();
 
-    FB.logout();
+    // $(document).trigger('click', '.fb-login-button', function(){
+    //   $('#photo-grid').hide();
 
-    $('#photo-grid').remove();
+    //   // start with menu hidden
+    //   $('.top-bar-section').hide();
 
-    // start with menu hidden
-    $('.top-bar-section').hide();
+    //   // show the login
+    //   $('#login').show();
+    // });
 
-    // start with login template
-    $('#main').append( viewUI.renderTemplate('.tmp-login', {}) );
+    FB.logout(function(){
+      $('#photo-grid').hide();
 
-    checkLoginState();
+      // start with menu hidden
+      $('.top-bar-section').hide();
+
+      // show the login
+      $('#login').show();
+    });
   });
 
   // start with menu hidden
