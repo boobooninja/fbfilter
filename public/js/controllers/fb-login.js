@@ -18,7 +18,7 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     console.log(response.status);
     // Logged into your app and Facebook.
-    $('#login').remove();
+    $('#login').hide();
 
     $('.top-bar-section').show();
 
@@ -109,7 +109,6 @@ function testAPI() {
 // }
 
 
-$(document).find('#posts').hide();
 $(document).find('#photos').show();
 
 
