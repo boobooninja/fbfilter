@@ -1,5 +1,6 @@
-/public/scss/.sass_cache/
+public/scss/.sass_cache/
 .DS_Store
 .bundle/
 vendor/
 Gemfile.lock
+.sass-cache/
