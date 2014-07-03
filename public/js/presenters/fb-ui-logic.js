@@ -11,8 +11,6 @@
       return rendered;
     };
 
-
-
     function handlePhotos(photos,type) {
       $('#photo-grid').empty();
       for(var i = 0; i < photos.length; i++) {
@@ -46,52 +44,38 @@
 
     $(document).on('click', '#likes', function(e) {
       e.preventDefault();
-
+      bl.sortFunc = renderPhotosByLikes;
       renderPhotosByLikes();
     });
 
     $(document).on('click', '#comments', function(e) {
       e.preventDefault();
-
+      bl.sortFunc = renderPhotosByComments;
       renderPhotosByComments();
     });
 
     $(window).scroll(function(e) {
       e.preventDefault();
-      var scrolled = $(window).scrollTop() + $(window).height()
-      var docHeight =  $(document).height()
-      console.log('scrolled: ',scrolled, ' doc height: ',docHeight );
+      if (window.ifCanScroll == true) {
+        var scrolled = $(window).scrollTop() + $(window).height()
+        var docHeight =  $(document).height()
+        console.log('scrolled: ',scrolled, ' doc height: ',docHeight );
 
-      if(scrolled >= docHeight) {
-        console.log('lounch event append next page');
-        $.getJSON( bl.fbPhotos.photos.paging.next, function(data){
-          if(!data) {return;}
-          console.log(data);
-          bl.fbPhotos.photos.paging = data.paging;
-          handlePhotos(data.data,'likes');
-          console.log('added');
-        });
-
+        if(scrolled >= docHeight) {
+          window.ifCanScroll = false;
+          console.log('get next page');
+          bl.getNextPhotos(function(){ window.ifCanScroll = true;});
         }
-      });
-
+      }
+    });
   };
 
+  window.ifCanScroll = true;
   // this runs it
   window.viewUI = new UI();
 
   $(document).on('click', '#logout-link', function(e) {
     e.preventDefault();
-
-    // $(document).trigger('click', '.fb-login-button', function(){
-    //   $('#photo-grid').hide();
-
-    //   // start with menu hidden
-    //   $('.top-bar-section').hide();
-
-    //   // show the login
-    //   $('#login').show();
-    // });
 
     FB.logout(function(){
       $('#photo-grid').hide();
