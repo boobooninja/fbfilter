@@ -11,6 +11,8 @@
       return rendered;
     };
 
+
+
     function handlePhotos(photos,type) {
       $('#photo-grid').empty();
       for(var i = 0; i < photos.length; i++) {
@@ -54,6 +56,25 @@
       renderPhotosByComments();
     });
 
+    $(window).scroll(function(e) {
+      e.preventDefault();
+      var scrolled = $(window).scrollTop() + $(window).height()
+      var docHeight =  $(document).height()
+      console.log('scrolled: ',scrolled, ' doc height: ',docHeight );
+
+      if(scrolled >= docHeight) {
+        console.log('lounch event append next page');
+        $.getJSON( bl.fbPhotos.photos.paging.next, function(data){
+          if(!data) {return;}
+          console.log(data);
+          bl.fbPhotos.photos.paging = data.paging;
+          handlePhotos(data.data,'likes');
+          console.log('added');
+        });
+
+        }
+      });
+
   };
 
   // this runs it
@@ -82,3 +103,19 @@
   $('#main').append( viewUI.renderTemplate('.tmp-login', {}) );
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

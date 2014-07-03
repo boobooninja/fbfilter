@@ -60,6 +60,7 @@
         }
       });
     };
+
   };
 
   window.bl = new BusinessLogic();
