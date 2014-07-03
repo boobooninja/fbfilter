@@ -59,6 +59,22 @@
   // this runs it
   window.viewUI = new UI();
 
+  $(document).on('click', '#logout-link', function(e) {
+    e.preventDefault();
+
+    FB.logout();
+
+    $('#photo-grid').remove();
+
+    // start with menu hidden
+    $('.top-bar-section').hide();
+
+    // start with login template
+    $('#main').append( viewUI.renderTemplate('.tmp-login', {}) );
+
+    checkLoginState();
+  });
+
   // start with menu hidden
   $('.top-bar-section').hide();
 

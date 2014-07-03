@@ -1,91 +1,62 @@
-/*
-Syntax error: File to import not found or unreadable: foundation/functions.
-              Load path: /Users/Loren/code/mks/fbfilter (DEPRECATED)
-        on line 13 of public/scss/foundation/_settings.scss
-        from line 10 of public/scss/foundation.scss
-        from line 1 of public/scss/fb-filter-style.scss
+.photo-block {
+  width: 200px;
+  height: 200px;
+  background-color: #e9eaed; }
 
-8: 
-9: body {
-10:   background-color: #e9eaed;
-11:   font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
-12: }
-13: 
-14: .top-bar-section ul li {
-15:   background-color: none;
-16: }
-17: 
-18: #nav-section ul li {
+body {
+  background-color: #e9eaed;
+  font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif; }
 
-Backtrace:
-public/scss/foundation/_settings.scss:13
-public/scss/foundation.scss:10
-public/scss/fb-filter-style.scss:1
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/import_node.rb:66:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:283:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:121:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `block (2 levels) in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:121:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:121:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `block (2 levels) in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:121:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:121:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:151:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/engine.rb:274:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:378:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:186:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:357:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:250:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.8/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+.top-bar-section ul li {
+  background-color: none; }
+
+#nav-section ul li {
+  background-color: #4c66a4; }
+
+#nav-section ul li a:hover {
+  background: #3c5081; }
+
+#banner {
+  background-color: #4c66a4;
+  height: 45px; }
+
+#banner ul li a {
+  background: #4c66a4; }
+
+li {
+  list-style-type: none; }
+
+.tall {
+  padding-top: 10%; }
+
+.hidden {
+  display: none; }
+
+/*.container {
+  height: 100%;
+  margin-top: 20%;
+}
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: foundation/functions.\A               Load path: /Users/Loren/code/mks/fbfilter (DEPRECATED)\A         on line 13 of public/scss/foundation/_settings.scss\A         from line 10 of public/scss/foundation.scss\A         from line 1 of public/scss/fb-filter-style.scss\A \A 8: \A 9: body {\A 10:   background-color: #e9eaed;\A 11:   font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;\A 12: }\A 13: \A 14: .top-bar-section ul li {\A 15:   background-color: none;\A 16: }\A 17: \A 18: #nav-section ul li {"; }
+/*#my-box {
+  width: 80%;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin: 50px auto;
+}
+*/
+div.panel {
+  /*-webkit-border-radius: 15px;*/
+  /*border-radius: 15px;*/
+  padding: 20px;
+  margin: 0 auto;
+  width: 75%;
+  height: 100%;
+  background-color: white; }
+
+.center {
+  text-align: center; }
+
+@media all and (max-width: 64rem) {
+  .main {
+    max-width: 90%; } }
