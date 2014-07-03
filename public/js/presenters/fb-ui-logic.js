@@ -59,4 +59,10 @@
   // this runs it
   window.viewUI = new UI();
 
+  // start with menu hidden
+  $('.top-bar-section').hide();
+
+  // start with login template
+  $('#main').append( viewUI.renderTemplate('.tmp-login', {}) );
+
 })();

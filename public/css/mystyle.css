@@ -26,6 +26,18 @@ body {
   font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
 }
 
+.top-bar-section ul li {
+  background-color: none;
+}
+
+#nav-section ul li {
+  background-color: #4c66a4;
+}
+
+.top-bar-section img {
+  height: 43px;
+}
+
 #banner {
   background-color: #4c66a4;
   height: 45px;
@@ -70,6 +82,12 @@ div.panel {
 .center {
   text-align: center;
 }
+
+/*@media only screen and (min-width: 40.063em)
+.top-bar-section li:not(.has-form) a:not(.button) {
+
+}
+*/
 
 @media all and (max-width: 64rem) {
   .main {
